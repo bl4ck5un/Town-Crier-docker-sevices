@@ -1,0 +1,6 @@
+# this has secrets
+.env
+
+logs
+.DS_Store
+env
