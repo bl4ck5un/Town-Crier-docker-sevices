@@ -9,7 +9,7 @@ services:
           - ./logs:/var/log/tc/
     tc-relay:
         env_file:
-          - ./infura_credentials.env
+          - ./.env
         depends_on:
           - tc-core
         image: "bl4ck5un/tc-relay"
