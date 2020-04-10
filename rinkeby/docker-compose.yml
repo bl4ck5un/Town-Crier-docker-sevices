@@ -1,5 +1,7 @@
 version: "2"
 services:
+    # to run just the backend
+    # docker run -v $PWD/config-rinkeby-sim:/config -v $PWD/logs:/var/log/tc/  --entrypoint tc --rm -p 8123:8123 bl4ck5un/tc-core:Debug
     tc-core:
         image: "bl4ck5un/tc-core:Debug"
         network_mode: host
@@ -9,7 +11,7 @@ services:
           - ./logs:/var/log/tc/
     tc-relay:
         env_file:
-          - ./.env
+          - .env
         depends_on:
           - tc-core
         image: "bl4ck5un/tc-relay"

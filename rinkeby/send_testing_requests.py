@@ -58,7 +58,7 @@ if __name__ == '__main__':
     from os.path import exists
     from dotenv import load_dotenv
 
-    DOT_ENV_PATH='./.env'
+    DOT_ENV_PATH= '.env'
     if exists(DOT_ENV_PATH):
         load_dotenv(dotenv_path=DOT_ENV_PATH, verbose=True)
 
